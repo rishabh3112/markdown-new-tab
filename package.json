@@ -1,7 +1,7 @@
 {
-  "name": "markdown-new-tab",
+  "name": "note-it-down",
   "version": "1.0.0",
-  "description": "",
+  "description": "a markdown-new-tab fork",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./src/js",
@@ -22,14 +22,6 @@
     "gulp-watch": "^4.3.11",
     "gulp-webserver": "^0.9.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/plibither8/markdown-new-tab.git"
-  },
-  "author": "Mihir Chaturvedi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/plibither8/markdown-new-tab/issues"
-  },
-  "homepage": "https://github.com/plibither8/markdown-new-tab#readme"
+  "author": "Rishabh Chawla",
+  "license": "MIT"
 }

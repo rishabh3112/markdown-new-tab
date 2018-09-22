@@ -7,18 +7,18 @@
 section.bar
     height 40px
     width 100%
-    background #000
+    background #263238
     color #fff
     position fixed
     bottom 0
     font-size 16px
-    border-top 1px solid white
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
     z-index 4
 
     #lastEdited
         position absolute
         right 0
-        border-left 1px solid white    
+        background #00897b 
         line-height 40px
         padding 0 10px
         cursor pointer
@@ -32,16 +32,17 @@ section.bar
             left -1px
             text-align center
             width 100%
-            border-top 1px solid white
-            border-left 1px solid white
+            background darken(#00897b,20%)
             white-space nowrap
     
     .button
         padding 0
         height 100%
         width 40px
+        margin-left 5px
         position absolute
         left 0
+
 
 section.main
     height 100%
@@ -52,25 +53,29 @@ section.main
     transition 0.1s all linear
 
     textarea, .markdown-body
-        background inherit
+        background #fff
         border none
-        height 100%
+        margin-top 20px
+        height 90vh
         max-width 1000px
         width 95%
+        box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
         padding 5vh
-        color white
+        color #222
+        font-family 'Fira Mono'
         line-height 1.4em
         outline none
         resize none
         overflow-y auto
 
         &::-webkit-scrollbar
-            width 15px
-            background #000
+            width 10px
 
         &::-webkit-scrollbar-thumb
-            background #000
-            border 1px solid white
+            background #263248
+            border-radius: 5px
+            border-right none
+             
     
     textarea
         font-size 18px
@@ -91,40 +96,46 @@ section.main
 .button
     cursor pointer
     padding 10px
+    width: 40px
+    height: 40px
+    background #00897b
+    border-radius: 50%
+    box-shadow 0 5px 10px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23)
     font-family monospace
     
     img
         cursor pointer
         height 20px
-        width auto
+        width 20px
 
     &:hover
-        outline 1px solid white
+        box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
 
 
 section.history, section.settings
     height 80vh
     max-width 1200px
     width 95%
-    border 1px solid white
+    box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
     position absolute
-    background rgba(0,0,0,0.8)
+    background white
     top 5vh
-    color white
+    color #222222
     flex-direction column
     justify-content flex-start
 
     .header
         width 100%
-        padding 20px
+        padding 5px
         cursor move
         cursor -webkit-grab
-        border-bottom 1px solid #333
+        background #00897b
+        color white
 
         h1
-            font-size 35px
-            text-align center
-            font-weight 100
+            font-size 18px
+            padding-left 50px
+            font-weight 700
             flex 1
 
         .close
@@ -134,11 +145,11 @@ section.history, section.settings
         
             img
                 cursor pointer
-                height 20px
+                height 10px
                 width auto
 
             &:hover
-                outline 1px solid white
+                background #ff4444
 
     &.z-index-2
         z-index 2
@@ -156,11 +167,10 @@ section.history
 
         &::-webkit-scrollbar
             width 15px
-            background #000
 
         &::-webkit-scrollbar-thumb
-            background #000
-            border 1px solid white
+            background #263248
+            border-radius: 7.5px
             border-right none
 
     .item
@@ -170,8 +180,7 @@ section.history
         textarea
             width 100%
             height 50vh
-            background #1119
-            border-radius 7px
+            background #263238
             overflow-y scroll
             padding 20px
             resize none
@@ -184,26 +193,27 @@ section.history
 
             &::-webkit-scrollbar
                 width 10px
-                background #000
 
             &::-webkit-scrollbar-thumb
-                background #000
-                border 1px solid white
+                background #263248
+                border-radius: 5px
+                border-right none
+                 
 
         .markdown-body
             padding 20px
-            background #1119
-            border-radius 7px
+            background #263238
             max-height 50vh
             overflow-y scroll
 
             &::-webkit-scrollbar
                 width 10px
-                background #000
 
             &::-webkit-scrollbar-thumb
-                background #000
-                border 1px solid white
+                background #263248
+                border-radius: 5px
+                border-right none
+                 
 
         p
             font-size 16px
@@ -233,16 +243,14 @@ section.settings
 
         &::-webkit-scrollbar
             width 15px
-            background #000
 
         &::-webkit-scrollbar-thumb
-            background #000
-            border 1px solid white
+            background #263248
+            border-radius: 7.5px
             border-right none
     
     .item
         padding 25px 40px
-        border-bottom 1px solid #333
         cursor pointer
 
         .main
@@ -257,24 +265,26 @@ section.settings
 
             p
                 font-size 16px
-                color #bbb
+                color #999
                 margin-top 10px
                 margin-right 20px
 
         .switch
             height 30px
             width 30px
-            border 2px solid white
+            border 2px solid #263248
+            border-radius 15px
             align-items center
 
             .box
                 height 20px
                 width 20px
+                border-radius 10px
                 transition 0.2s all linear
 
         &.on
             .box
-                background white
+                background #263248
 
         &.off
             .box
